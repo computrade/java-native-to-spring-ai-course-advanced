@@ -1,0 +1,34 @@
+services:
+  db:
+    image: 'pgvector/pgvector:pg17'
+    container_name: springai-course-postgres
+    restart: always
+    environment:
+      - 'POSTGRES_DB=springai_db'
+      - 'POSTGRES_USER=demouser'
+      - 'POSTGRES_PASSWORD=demopassword'
+    ports:
+      - '5432:5432'
+    command: >
+      -c 'maintenance_work_mem=256MB'
+      -c 'max_parallel_maintenance_workers=4'
+    volumes:
+      # Named volume: persists in WSL2 managed storage
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U demouser -d springai_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: springai-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: adminpassword
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+volumes:
+  pgdata: # Docker manages this automatically

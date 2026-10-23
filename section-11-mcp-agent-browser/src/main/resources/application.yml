@@ -1,0 +1,52 @@
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor: DEBUG
+    org.springframework.web.client.RestClient: DEBUG
+
+spring:
+  application:
+    name: section-11-mcp-agent-browser
+  datasource:
+    url: jdbc:postgresql://localhost:5432/springai_db
+    username: demouser
+    password: demopassword
+    driver-class-name: org.postgresql.Driver
+  ai:
+    mcp:
+      client:
+        enabled: true
+        name: spring-ai-course-mcp-agent-browser
+        version: 1.0.0
+        request-timeout: 60s
+        type: SYNC  # or ASYNC for reactive applications
+        toolcallback.enabled: true
+        stdio:
+          servers-configuration: classpath:mcp-servers.json
+    tools:
+      throw-exception-on-error: true
+    chat:
+      memory:
+        repository:
+          jdbc:
+            initialize-schema: always
+    google:
+      genai:
+        api-key: ${GEMINI_API_KEY}
+        chat:
+          model: gemini-3.6-flash
+        embedding:
+          api-key: ${GEMINI_API_KEY}
+          text:
+            model: gemini-embedding-2
+            dimensions: 1536  #align to the vector_store dimensions.
+    vectorstore:
+      pgvector:
+        index-type: HNSW  #Default is HNSW, can also be FLAT
+        distance-type: COSINE_DISTANCE #Default is COSINE_DISTANCE, can also be EUCLIDEAN_DISTANCE or INNER_PRODUCT
+        table-name: vector_store
+        initialize-schema: true
+        schema-name: public
+        dimensions: 1536
+        max-document-batch-size: 100
+
+

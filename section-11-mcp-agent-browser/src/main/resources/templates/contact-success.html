@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Inquiry Submitted</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f6f9; }
+        .success-card { max-width: 500px; background: white; padding: 30px; border-radius: 8px; border-left: 5px solid #28a745; }
+    </style>
+</head>
+<body>
+
+<div class="success-card">
+    <h1 id="successHeader">Form Submitted Successfully!</h1>
+    <p>Thank you <strong id="submittedName" th:text="${submittedData.fullName}">User</strong>, your message regarding <span th:text="${submittedData.topic}">Topic</span> has been received.</p>
+    <a href="/contact">Submit another form</a>
+</div>
+
+</body>
+</html>
