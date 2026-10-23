@@ -1,0 +1,57 @@
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics #,prometheus
+app:
+  finnhub:
+    api-key: ${FINNHUB_API_KEY}
+
+
+spring:
+  application:
+    name: chat-claude
+  datasource:
+    url: jdbc:postgresql://localhost:5432/springai_db_advanced
+    username: demouser
+    password: demopassword
+    driver-class-name: org.postgresql.Driver
+  ai:
+    model:
+      chat: anthropic
+      embedding:
+        text: google-genai
+    tools:
+      throw-exception-on-error: true
+    chat:
+      memory:
+        repository:
+          jdbc:
+            initialize-schema: always
+    anthropic:
+      api-key: ${ANTHROPIC_API_KEY}
+      chat:
+        model: claude-haiku-5-5   # or claude-sonnet-5-5 / claude-opus-5-5
+        max-tokens: 4096
+    google:
+      genai:
+        embedding:
+          api-key: ${GEMINI_API_KEY}
+          text:
+            model: gemini-embedding-2
+            dimensions: 1536  #align to the vector_store dimensions.
+    vectorstore:
+      pgvector:
+        index-type: HNSW  #Default is HNSW, can also be FLAT
+        distance-type: COSINE_DISTANCE #Default is COSINE_DISTANCE, can also be EUCLIDEAN_DISTANCE or INNER_PRODUCT
+        table-name: vector_store
+        initialize-schema: true
+        schema-name: public
+        dimensions: 1536
+        max-document-batch-size: 100
+
+

@@ -1,0 +1,101 @@
+ID,Course Name,Category,Description,Rating,No of Students,Total Course Hours
+1,Python for Beginners,Development,"Master the basics of Python programming. Learn variables, loops, functions, and basic data structures to build your first applications.",4.7,45230,12.5
+2,Advanced Web Development,Development,"Deep dive into HTML5, CSS3, JavaScript, and modern frameworks like React to build responsive, dynamic websites.",4.6,28150,18.0
+3,UI/UX Design Fundamentals,Design,Learn the core principles of user interface and user experience design. Create wireframes and prototypes using Figma.,4.5,15400,10.5
+4,Introduction to Finance,Finance,"Understand financial statements, budgeting, and basic investing strategies to manage corporate or personal wealth effectively.",4.2,8900,8.0
+5,Digital Marketing 101,Business,"Explore SEO, SEM, social media marketing, and email campaigns to boost brand visibility and drive online sales.",4.4,34200,14.0
+6,Data Science with R,Development,"Learn statistical analysis, data visualization, and predictive modeling using the powerful R programming language.",4.3,12100,16.5
+7,Graphic Design Masterclass,Design,"Master Photoshop, Illustrator, and InDesign. Learn typography, color theory, and branding to create stunning visual assets.",4.8,22600,19.5
+8,Product Management Basics,Business,"Discover the product lifecycle, agile methodologies, user story creation, and roadmap planning for successful tech products.",4.1,7450,9.0
+9,Excel for Data Analysis,Finance,"Go beyond basics with VLOOKUP, Pivot Tables, and advanced formulas to analyze complex financial and business datasets.",4.6,49100,6.5
+10,Introduction to Cybersecurity,Development,"Learn the essentials of network security, cryptography, and how to protect systems against common cyber threats.",4.5,18300,11.0
+11,Agile & Scrum Frameworks,Business,Understand the principles of Agile project management and Scrum framework to improve team collaboration and delivery speed.,4.3,11200,5.0
+12,Creative Writing Workshop,Lifestyle,"Unleash your imagination. Learn plot development, character building, and dialogue writing for fiction and non-fiction.",4.7,5300,8.5
+13,Mobile App Dev with Flutter,Development,Build cross-platform mobile apps for iOS and Android using a single codebase with Google's Flutter framework.,4.6,14800,20.0
+14,Stock Market Investing,Finance,"Learn how to analyze stocks, read charts, and build a diversified portfolio for long-term financial growth.",3.9,25600,7.5
+15,Photography Masterclass,Design,"Control your camera manually. Master lighting, composition, and post-processing in Lightroom to capture breathtaking photos.",4.7,19400,13.0
+16,Machine Learning Basics,Development,"Introduction to regression, classification, clustering, and neural networks using Python and Scikit-Learn libraries.",4.4,21900,15.0
+17,Business Strategy & Growth,Business,"Learn how to analyze competitors, identify market opportunities, and scale your business efficiently.",4.2,6800,10.0
+18,Public Speaking & Confidence,Lifestyle,"Overcome stage fright and deliver powerful, persuasive presentations. Learn body language and vocal modulation techniques.",4.6,13200,4.5
+19,Cryptocurrency & Blockchain,Finance,"Understand decentralized finance, how blockchain works, and the fundamentals of trading Bitcoin and altcoins.",3.8,31000,9.5
+20,3D Modeling in Blender,Design,"Learn to model, texture, and animate 3D objects and characters from scratch using open-source software Blender.",4.5,16700,17.0
+21,SQL for Data Analytics,Development,"Write powerful SQL queries to extract, filter, and aggregate data from relational database management systems.",4.7,38400,8.0
+22,Copywriting that Converts,Business,Write compelling headlines and sales copy that hook readers and turn prospects into paying customers.,4.4,12900,6.0
+23,Personal Finance Management,Finance,"Take control of your money. Learn budgeting, debt reduction, saving strategies, and smart long-term financial planning.",4.8,27500,5.5
+24,Video Editing with Premiere,Design,"Master Adobe Premiere Pro. Learn cutting, transitions, color correction, and audio syncing for professional videos.",4.6,23100,14.5
+25,JavaScript Deep Dive,Development,"Move past the basics. Learn asynchronous programming, closures, prototypes, and ES6+ features in JavaScript.",4.5,29800,16.0
+26,SEO Masterclass,Business,"Rank your website higher on Google. Learn keyword research, on-page optimization, backlink building, and technical SEO.",4.3,20400,11.5
+27,Corporate Tax Essentials,Finance,"Understand the basics of corporate tax structures, deductions, credits, and compliant financial reporting.",3.6,3200,7.0
+28,Logo Design & Branding,Design,"Learn the art of creating iconic logos. Understand brand identity, corporate guidelines, and client presentation.",4.5,9800,8.0
+29,Introduction to Cloud (AWS),Development,"Explore cloud computing concepts and learn core Amazon Web Services like EC2, S3, and IAM.",4.6,33500,13.0
+30,Negotiation Skills,Business,"Learn proven tactics to negotiate salary, business deals, and everyday situations with confidence and success.",4.7,14200,4.0
+31,Accounting Fundamentals,Finance,"Learn double-entry bookkeeping, ledger management, and how to prepare basic balance sheets and income statements.",4.1,11600,10.5
+32,Drawing & Sketching Basics,Design,"Master shading, perspective, and anatomy. Develop your hand-eye coordination to draw realistic objects and faces.",4.8,17900,12.0
+33,Devops Tools & Jenkins,Development,Automate software delivery. Learn continuous integration and continuous deployment (CI/CD) using Jenkins and Git.,4.4,15100,14.0
+34,Social Media Strategy,Business,"Build an audience on Instagram, TikTok, and LinkedIn. Create content calendars and track engagement metrics.",4.2,26300,9.0
+35,Options Trading Explained,Finance,"Learn advanced investment strategies. Understand calls, puts, risk management, and options market dynamics.",3.7,8400,11.0
+36,Typography for Designers,Design,"Dive deep into font pairings, hierarchy, legibility, and the history of type in digital and print layouts.",4.3,4600,5.5
+37,Node.js Backend Development,Development,"Build scalable backend applications. Learn Express framework, REST APIs, and MongoDB database integration.",4.6,24700,16.5
+38,Leadership & Team Management,Business,"Develop your leadership style. Learn conflict resolution, delegation, motivation, and managing remote teams effectively.",4.5,18900,7.5
+39,Real Estate Investing,Finance,"Learn how to evaluate rental properties, calculate ROI, flip houses, and secure financing for real estate.",4.0,14500,10.0
+40,Motion Graphics in After Effects,Design,"Create stunning animations, visual effects, and kinetic typography using Adobe After Effects tools.",4.7,13800,18.5
+41,C++ Programming Masterclass,Development,"Learn powerful systems programming. Master memory management, pointers, and object-oriented programming in C++.",4.4,22100,19.0
+42,E-commerce with Shopify,Business,"Build, launch, and scale an online store. Learn product sourcing, payment gateways, and dropshipping basics.",4.3,31400,8.5
+43,Risk Management in Finance,Finance,"Learn how to identify, assess, and mitigate financial and operational risks in corporate environments.",4.1,5200,9.0
+44,Interior Design Principles,Design,"Understand space planning, color schemes, lighting layouts, and fabric selection for beautiful residential interiors.",4.6,11300,12.0
+45,Git & GitHub Version Control,Development,"Master version control. Learn branching, merging, pull requests, and collaborative coding workflows.",4.8,48000,3.5
+46,B2B Sales Techniques,Business,"Master cold outreach, building sales pipelines, overcoming objections, and closing high-ticket corporate deals.",4.2,7900,7.0
+47,Behavioral Economics,Finance,"Explore how psychological factors influence financial decisions, market anomalies, and consumer spending habits.",4.5,6400,8.0
+48,Webflow Without Code,Design,Design and publish custom responsive websites visually using Webflow's powerful layout and interaction tools.,4.4,9100,10.5
+49,Java for Enterprise Apps,Development,"Master Java syntax, object-oriented concepts, and Spring Boot framework for robust enterprise software solutions.",4.5,26400,18.0
+50,Time Management & Productivity,Lifestyle,"Beat procrastination. Learn the Pomodoro technique, time blocking, and prioritization frameworks to get things done.",4.7,35000,3.0
+51,Google Analytics 4 (GA4),Business,"Set up tracking, analyze traffic sources, and build custom reports to measure website performance.",4.3,22800,6.5
+52,Venture Capital Funding,Finance,"Understand how startups raise money, term sheets, valuation models, and the venture capitalist mindset.",3.9,4100,8.0
+53,Fashion Design & Illustration,Design,"Learn to sketch fashion figures, understand textiles, and conceptualize your own clothing collections.",4.4,5700,13.5
+54,Linux Command Line Basics,Development,"Get comfortable with the terminal. Learn file navigation, permissions, shell scripting, and basic system administration.",4.6,31200,7.0
+55,Project Management Professional,Business,"Prepare for the PMP exam. Learn scope management, scheduling, cost estimation, and stakeholder communication.",4.5,16300,20.0
+56,Financial Modeling in Excel,Finance,"Build dynamic valuation models, discounted cash flow (DCF) analyses, and forecasting models for businesses.",4.6,13900,15.0
+57,Pixel Art for Game Design,Design,"Create retro game characters, tilesets, and backgrounds using Aseprite or similar pixel art software.",4.7,8200,9.5
+58,Docker & Kubernetes Basics,Development,Containerize applications with Docker and orchestrate them at scale using Kubernetes clusters.,4.5,19700,12.5
+59,Affiliate Marketing Strategy,Business,"Generate passive income by promoting products. Learn niche selection, content creation, and tracking conversions.",3.8,28600,8.0
+60,Mergers & Acquisitions,Finance,"Learn corporate restructuring, deal structuring, due diligence, and financial evaluation of M&A targets.",4.2,3800,11.5
+61,Photography Lighting Basics,Design,"Master natural and studio lighting. Understand softboxes, reflectors, flash ratios, and dramatic lighting setups.",4.5,6100,6.0
+62,C# and Unity Game Dev,Development,Learn C# programming and build your first 2D and 3D video games using Unity engine.,4.7,25300,19.0
+63,Customer Success Management,Business,"Retain clients and increase lifetime value. Learn onboarding tactics, health scoring, and renewals management.",4.3,6900,5.0
+64,Cryptocurrency Tax Guide,Finance,"Understand reporting requirements, capital gains calculations, and tax compliance for crypto trading and staking.",3.5,4800,4.5
+65,User Research Methods,Design,"Learn to conduct interviews, usability tests, surveys, and turn user insights into actionable design improvements.",4.4,8500,7.5
+66,Data Structures & Algorithms,Development,"Crack coding interviews. Master arrays, linked lists, trees, graphs, sorting, and dynamic programming.",4.6,34900,17.5
+67,Email Marketing Automation,Business,"Build subscriber lists, write engaging newsletters, and design automated email drip campaigns that convert.",4.2,16200,7.0
+68,Technical Analysis for Trading,Finance,"Read stock candlestick charts, identify trends, and use indicators like RSI and MACD for short-term trading.",4.0,24100,10.0
+69,UI Animation Principles,Design,"Add life to designs. Learn micro-interactions, page transitions, and UI animation using Smart Animate in Figma.",4.6,11000,6.5
+70,PHP & MySQL Fundamentals,Development,"Build dynamic, database-driven web applications. Learn server-side forms, user authentication, and basic CRUD operations.",4.1,18500,13.0
+71,Entrepreneurship Launchpad,Business,"Turn an idea into a business. Write business plans, build MVPs, and validate your target market.",4.4,12400,9.0
+72,Wealth Building Strategies,Finance,"Develop long-term habits for financial independence. Learn indexing, asset allocation, and compound interest power.",4.8,21500,5.0
+73,Vector Illustration Masterclass,Design,"Create scalable vector graphics, icons, and complex character designs using Adobe Illustrator techniques.",4.6,10200,11.0
+74,Cyber Threat Intelligence,Development,"Learn to identify, track, and analyze modern hacker tactics, techniques, and indicators of compromise.",4.3,5900,12.0
+75,Content Marketing Strategy,Business,"Drive organic traffic with high-quality content. Master blogging, video planning, and content distribution networks.",4.4,19800,8.5
+76,Microeconomics Principles,Finance,"Understand supply and demand, market structures, consumer choices, and firm behavior in competitive markets.",4.1,7200,10.0
+77,Calligraphy & Hand Lettering,Design,"Learn historical scripts, stroke pressure, brush lettering, and digitizing your handwritten designs for projects.",4.7,5100,6.0
+78,TypeScript for Professionals,Development,"Improve code reliability. Learn static typing, interfaces, enums, and advanced types in modern TypeScript.",4.6,16800,9.5
+79,Lean Startup Methodology,Business,Minimize waste and build what customers want. Learn the Build-Measure-Learn feedback loop and pivoting.,4.3,9400,7.0
+80,Behavioral Finance Essentials,Finance,"Understand how cognitive biases, herd mentality, and emotions drive stock market bubbles and crashes.",4.2,4900,6.5
+81,Landscape Photography,Design,"Capture nature's beauty. Learn long exposure, golden hour shooting, weather planning, and wide-angle composition.",4.8,12100,8.0
+82,GraphQL API Development,Development,"Build efficient APIs. Learn queries, mutations, schemas, and setting up GraphQL servers with Node.js.",4.5,11300,10.0
+83,Brand Strategy Workshop,Business,"Define a company's mission, values, target audience, and positioning statement to guide creative design work.",4.4,8700,7.5
+84,Personal Bankruptcy Law,Finance,"Understand legal definitions, filing processes, liquidation rules, and rebuilding credit after financial distress.",3.4,1200,5.5
+85,Figma Advanced Techniques,Design,"Level up workflows. Master auto-layout, component properties, design systems, and advanced interactive prototypes.",4.7,20600,9.0
+86,React Native for Mobile Apps,Development,Leverage React knowledge to build truly native iOS and Android applications with components.,4.5,17400,15.0
+87,Growth Hacking Techniques,Business,"Use creative, low-cost strategies to acquire users rapidly. Learn viral loops, A/B testing, and funnels.",4.1,14900,8.0
+88,Fixed Income & Bonds Investing,Finance,"Learn how treasury bonds, corporate debt, yields, and interest rates impact income investing portfolios.",4.0,6300,8.5
+89,Design Thinking Framework,Design,"Master the human-centered approach to innovation. Empathize, define, ideate, prototype, and test new products.",4.5,15200,7.0
+90,Golang Programming Intro,Development,"Learn Google's Go language. Master basic syntax, concurrency with goroutines, and building fast microservices.",4.6,12800,11.5
+91,Crisis Management for Brands,Business,"Learn how companies handle public relations disasters, negative press, social media backlash, and communications.",4.2,5500,6.0
+92,International Trade Finance,Finance,"Understand letters of credit, import/export regulations, foreign exchange risk, and global supply chain payments.",3.9,3900,10.5
+93,Matte Painting for Film,Design,Blend photos and digital painting to create realistic film backgrounds and environments in Photoshop.,4.6,4200,14.0
+94,Next.js for Production,Development,"Learn server-side rendering, static site generation, routing, and optimizing React apps with Next.js.",4.7,19200,13.0
+95,Influencer Marketing Guide,Business,"Learn how brands pitch, negotiate, and run campaign sponsorships with top social media creators.",4.0,16500,6.5
+96,Real Estate Development,Finance,"Master the process of land acquisition, zoning laws, construction financing, and building commercial spaces.",4.1,3100,12.0
+97,T-Shirt Design & Merch,Design,"Design graphics optimized for print-on-demand platforms. Learn color limitations, vector sizing, and trends.",4.3,9900,5.0
+98,Rust Systems Programming,Development,"Learn memory safety without a garbage collector. Master ownership, borrowing, and concurrency features in Rust.",4.7,10400,16.0
+99,Public Relations Fundamentals,Business,"Master media relations, writing press releases, booking interviews, and building positive public image.",4.2,7600,7.5
+100,Forensic Accounting Basics,Finance,"Learn how to investigate financial fraud, trace hidden assets, and analyze suspicious bookkeeping records.",4.5,5800,11.0

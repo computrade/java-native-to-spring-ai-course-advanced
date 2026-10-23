@@ -1,3 +1,4 @@
 rootProject.name = 'java-native-to-spring-ai-advanced-course'
 
-include 'section-11-mcp-agent-browser'
+include 'chat-claude'
+include 'mcp-agent-browser'

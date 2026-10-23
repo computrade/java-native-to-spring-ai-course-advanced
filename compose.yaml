@@ -4,7 +4,7 @@ services:
     container_name: springai-course-postgres
     restart: always
     environment:
-      - 'POSTGRES_DB=springai_db'
+      - 'POSTGRES_DB=springai_db_advanced'
       - 'POSTGRES_USER=demouser'
       - 'POSTGRES_PASSWORD=demopassword'
     ports:
