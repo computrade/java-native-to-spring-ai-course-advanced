@@ -1,0 +1,46 @@
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics #,prometheus
+app:
+  finnhub:
+    api-key: ${FINNHUB_API_KEY}
+
+
+spring:
+  application:
+    name: chat-openai
+  datasource:
+    url: jdbc:postgresql://localhost:5432/springai_db_advanced
+    username: demouser
+    password: demopassword
+    driver-class-name: org.postgresql.Driver
+  ai:
+    tools:
+      throw-exception-on-error: true
+    chat:
+      memory:
+        repository:
+          jdbc:
+            initialize-schema: always
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      embedding:
+        model: text-embedding-3-small
+        dimensions: 1536
+    vectorstore:
+      pgvector:
+        index-type: HNSW  #Default is HNSW, can also be FLAT
+        distance-type: COSINE_DISTANCE #Default is COSINE_DISTANCE, can also be EUCLIDEAN_DISTANCE or INNER_PRODUCT
+        table-name: vector_store
+        initialize-schema: true
+        schema-name: public
+        dimensions: 1536
+        max-document-batch-size: 100
+
+

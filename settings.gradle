@@ -1,4 +1,6 @@
 rootProject.name = 'java-native-to-spring-ai-advanced-course'
 
+include 'chat-gemini'
+include 'chat-openai'
 include 'chat-claude'
 include 'mcp-agent-browser'

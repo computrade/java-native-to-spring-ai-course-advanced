@@ -29,16 +29,6 @@ public class ChatClaudeController {
         return ResponseEntity.ok(chatResponse);
     }
 
-    @GetMapping("/chat/{userId}/anthropic")
-    public ResponseEntity<String> chatAnthropic(
-            @PathVariable String userId,
-            @RequestParam String prompt) {
-
-        // Keep data for userId, so that the conversation is remembered for the same userId
-        String chatResponse = chatService.chat2(userId, prompt);
-        return ResponseEntity.ok(chatResponse);
-    }
-
     @PostMapping("/ingest")
     public ResponseEntity<String> ingestData() {
         vectorDBService.ingestCoursesToVectorStore();
