@@ -12,6 +12,7 @@ import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.client.JdkClientHttpRequestFactory;
 import org.springframework.web.client.RestClient;
 
 import java.util.ArrayList;
@@ -47,14 +48,14 @@ public class ChatClaudeConfig {
     }
 
 
+    // Pin the JDK HttpClient: the Anthropic SDK brings Apache HttpClient 5, which RestClient
+    // would otherwise auto-select, and its gzip handling truncates Finnhub responses to "{".
     @Bean
-    public RestClient.Builder restClientBuilder() {
-        return RestClient.builder();
-    }
-
-    @Bean
-    public RestClient finnHubRestClient(RestClient.Builder builder) {
-        return builder.baseUrl("https://finnhub.io/api/v1").build();
+    public RestClient finnHubRestClient() {
+        return RestClient.builder()
+                .requestFactory(new JdkClientHttpRequestFactory())
+                .baseUrl("https://finnhub.io/api/v1")
+                .build();
     }
 
 }
