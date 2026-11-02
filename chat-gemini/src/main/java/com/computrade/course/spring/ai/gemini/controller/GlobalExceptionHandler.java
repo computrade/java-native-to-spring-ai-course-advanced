@@ -26,7 +26,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<RestfulError> handleGeneralException(ToolExecutionException ex) {
+    public ResponseEntity<RestfulError> handleGeneralException(Exception ex) {
         RestfulError restfulError = RestfulError.builder()
                 .exceptionMessage("Exception message: " + ex.getMessage())
                 .httpError(HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase())
