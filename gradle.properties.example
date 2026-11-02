@@ -7,3 +7,7 @@ openaiApiKey=<YOUR_OPENAI_API_KEY>
 anthropicApiKey=<YOUR_CLAUDE_API_KEY>
 finnhubApiKey=<YOUR_FINNHUB_API_KEY>
 gitHubToken=<YOUR_GITHUB_TOKEN>
+awsApiKey=<YOUR_AWS_API_KEY>
+awsSecret=<YOUR_AWS_SECRET>
+awsBearerTokenBedrock=<YOUR_AWS_BEARER_TOKEN_BEDROCK>
+awsRegion=<YOUR_AWS_REGION>

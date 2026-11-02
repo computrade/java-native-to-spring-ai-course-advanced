@@ -69,6 +69,20 @@ subprojects {
         if (project.hasProperty('finnhubApiKey')) {
             environment 'FINNHUB_API_KEY', project.property('finnhubApiKey')
         }
+//        if (project.hasProperty('awsApiKey')) {
+//            environment 'AWS_ACCESS_KEY', project.property('awsApiKey')
+//        }
+//
+//        if (project.hasProperty('awsSecret')) {
+//            environment 'AWS_SECRET_KEY', project.property('awsSecret')
+//        }
+        if (project.hasProperty('awsBearerTokenBedrock')) {
+            environment 'AWS_BEARER_TOKEN_BEDROCK', project.property('awsBearerTokenBedrock')
+        }
+        if (project.hasProperty('awsRegion')) {
+            environment 'AWS_REGION', project.property('awsRegion')
+        }
+
 
     }
 
