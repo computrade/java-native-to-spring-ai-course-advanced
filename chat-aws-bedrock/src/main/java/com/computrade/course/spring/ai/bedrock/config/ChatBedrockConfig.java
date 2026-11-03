@@ -1,9 +1,6 @@
 package com.computrade.course.spring.ai.bedrock.config;
 
 
-import com.anthropic.aws.backends.AwsBackend;
-import com.anthropic.client.AnthropicClient;
-import com.anthropic.client.okhttp.AnthropicOkHttpClient;
 import com.computrade.course.spring.ai.bedrock.service.StockMarketToolService;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
