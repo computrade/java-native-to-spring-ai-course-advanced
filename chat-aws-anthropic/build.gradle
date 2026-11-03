@@ -1,0 +1,11 @@
+description = 'chat-anthropic'
+
+dependencies {
+
+     implementation 'org.springframework.ai:spring-ai-starter-model-chat-memory-repository-jdbc'
+    implementation 'org.springframework.ai:spring-ai-starter-vector-store-pgvector'
+    implementation 'org.springframework.ai:spring-ai-tika-document-reader'
+    // Message threads: Anthropic SDK on Claude Platform on AWS (not supported on Bedrock Converse).
+    implementation 'com.anthropic:anthropic-java:3.4.0'
+    implementation 'com.anthropic:anthropic-java-aws:3.4.0'
+}

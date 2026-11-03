@@ -1,0 +1,56 @@
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics #,prometheus
+app:
+  finnhub:
+    api-key: ${FINNHUB_API_KEY}
+
+
+spring:
+  application:
+    name: chat-aws-anthropic
+  datasource:
+    url: jdbc:postgresql://localhost:5432/springai_db_advanced
+    username: demouser
+    password: demopassword
+    driver-class-name: org.postgresql.Driver
+  ai:
+    tools:
+      throw-exception-on-error: true
+    chat:
+      memory:
+        repository:
+          jdbc:
+            initialize-schema: always
+    bedrock:
+      converse:
+        chat:
+          #model: us.amazon.nova-2-lite-v1:0
+          model: arn:aws:bedrock:us-east-1:332754400861:default-prompt-router/amazon.nova:1
+          temperature: 0.7
+      aws:
+        timeout: 5m
+        connection-timeout: 5s
+        #access-key: ${AWS_ACCESS_KEY}
+        #secret-key: ${AWS_SECRET_KEY}
+        #region: ${AWS_REGION}
+
+    model:
+      embedding: bedrock-titan
+    vectorstore:
+      pgvector:
+        index-type: HNSW  #Default is HNSW, can also be FLAT
+        distance-type: COSINE_DISTANCE #Default is COSINE_DISTANCE, can also be EUCLIDEAN_DISTANCE or INNER_PRODUCT
+        table-name: vector_store
+        initialize-schema: true
+        schema-name: public
+        dimensions: 1536
+        max-document-batch-size: 100
+
+

@@ -1,4 +1,4 @@
-description = 'chat-claude'
+description = 'chat-bedrock'
 
 dependencies {
 
@@ -7,4 +7,5 @@ dependencies {
     implementation 'org.springframework.ai:spring-ai-starter-model-chat-memory-repository-jdbc'
     implementation 'org.springframework.ai:spring-ai-starter-vector-store-pgvector'
     implementation 'org.springframework.ai:spring-ai-tika-document-reader'
+
 }

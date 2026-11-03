@@ -1,4 +1,4 @@
-description = 'chat-claude'
+description = 'chat-gemini'
 
 dependencies {
     implementation 'org.springframework.ai:spring-ai-starter-model-google-genai'
