@@ -1,13 +1,13 @@
-package com.computrade.course.spring.ai.gemini;
+package com.computrade.course.spring.ai.evaluation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ChatGeminiApplication {
+public class EvaluatorApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ChatGeminiApplication.class, args);
+        SpringApplication.run(EvaluatorApplication.class, args);
     }
 
 }

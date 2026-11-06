@@ -1,10 +1,12 @@
-package com.computrade.course.spring.ai.gemini.controller;
+package com.computrade.course.spring.ai.evaluation.controller;
 
-import com.computrade.course.spring.ai.gemini.service.ChatService;
-import com.computrade.course.spring.ai.gemini.service.VectorDBService;
+import com.computrade.course.spring.ai.evaluation.service.ChatService;
+import com.computrade.course.spring.ai.evaluation.service.VectorDBService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.embedding.EmbeddingResponse;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.Resource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,7 +16,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/gemini")
 @RequiredArgsConstructor
-public class ChatGeminiController {
+public class ChatController {
 
     private final ChatService chatService;
     private final VectorDBService vectorDBService;
@@ -27,6 +29,14 @@ public class ChatGeminiController {
         // Keep data for userId, so that the conversation is remembered for the same userId
         String chatResponse = chatService.chat(userId, prompt);
         return ResponseEntity.ok(chatResponse);
+    }
+
+    @GetMapping("/prompt-stuffing")
+    public ResponseEntity<String> promptStuffing(@RequestParam("message") String message) {
+
+        String chatResponse = chatService.promptStuffing(message);
+        return ResponseEntity.ok(chatResponse);
+
     }
 
     @PostMapping("/ingest")
@@ -47,5 +57,7 @@ public class ChatGeminiController {
         String response = vectorDBService.queryVectorStore(userId, prompt);
         return ResponseEntity.ok(response);
     }
+
+
 
 }

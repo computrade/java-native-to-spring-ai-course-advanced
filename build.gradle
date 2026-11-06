@@ -51,9 +51,31 @@ subprojects {
 
     tasks.named('test') {
         useJUnitPlatform()
+
+        if (project.hasProperty('geminiApiKey')) {
+            environment 'GEMINI_API_KEY', project.property('geminiApiKey')
+        }
+
+        if (project.hasProperty('openaiApiKey')) {
+            environment 'OPENAI_API_KEY', project.property('openaiApiKey')
+        }
+
+        if (project.hasProperty('anthropicApiKey')) {
+            environment 'ANTHROPIC_API_KEY', project.property('anthropicApiKey')
+        }
+
+        if (project.hasProperty('finnhubApiKey')) {
+            environment 'FINNHUB_API_KEY', project.property('finnhubApiKey')
+        }
+        if (project.hasProperty('awsBearerTokenBedrock')) {
+            environment 'AWS_BEARER_TOKEN_BEDROCK', project.property('awsBearerTokenBedrock')
+        }
+        if (project.hasProperty('awsRegion')) {
+            environment 'AWS_REGION', project.property('awsRegion')
+        }
     }
 
-    tasks.named('bootRun') {
+    tasks.named('bootRun')  {
         if (project.hasProperty('geminiApiKey')) {
             environment 'GEMINI_API_KEY', project.property('geminiApiKey')
         }

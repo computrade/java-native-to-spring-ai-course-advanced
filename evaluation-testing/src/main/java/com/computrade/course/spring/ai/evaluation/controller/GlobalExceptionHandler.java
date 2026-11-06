@@ -1,6 +1,6 @@
-package com.computrade.course.spring.ai.gemini.controller;
+package com.computrade.course.spring.ai.evaluation.controller;
 
-import com.computrade.course.spring.ai.gemini.model.RestfulError;
+import com.computrade.course.spring.ai.evaluation.model.RestfulError;
 import org.springframework.ai.tool.execution.ToolExecutionException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

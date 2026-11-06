@@ -1,7 +1,7 @@
-package com.computrade.course.spring.ai.gemini.service;
+package com.computrade.course.spring.ai.evaluation.service;
 
-import com.computrade.course.spring.ai.gemini.model.CompanyNews;
-import com.computrade.course.spring.ai.gemini.model.StockQuote;
+import com.computrade.course.spring.ai.evaluation.model.CompanyNews;
+import com.computrade.course.spring.ai.evaluation.model.StockQuote;
 import lombok.RequiredArgsConstructor;
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.ai.tool.annotation.ToolParam;

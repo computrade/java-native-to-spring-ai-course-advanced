@@ -1,7 +1,7 @@
-package com.computrade.course.spring.ai.gemini.config;
+package com.computrade.course.spring.ai.evaluation.config;
 
 
-import com.computrade.course.spring.ai.gemini.service.StockMarketToolService;
+import com.computrade.course.spring.ai.evaluation.service.StockMarketToolService;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;

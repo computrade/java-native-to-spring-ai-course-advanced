@@ -1,4 +1,4 @@
-package com.computrade.course.spring.ai.gemini.service;
+package com.computrade.course.spring.ai.evaluation.service;
 
 import com.opencsv.CSVReaderHeaderAware;
 import lombok.RequiredArgsConstructor;

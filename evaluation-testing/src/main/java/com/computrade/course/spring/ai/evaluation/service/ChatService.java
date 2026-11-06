@@ -1,9 +1,11 @@
-package com.computrade.course.spring.ai.gemini.service;
+package com.computrade.course.spring.ai.evaluation.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.memory.ChatMemory;
 import org.springframework.ai.chat.model.ChatResponse;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
@@ -11,6 +13,9 @@ import org.springframework.stereotype.Service;
 public class ChatService {
 
     private final ChatClient chatClient;
+
+    @Value("classpath:/hrPolicy.st")
+    Resource hrPolicyTemplate;
 
     public String chat(String convId, String prompt) {
 
@@ -23,4 +28,12 @@ public class ChatService {
         return response;
     }
 
+    public String promptStuffing(String message) {
+
+        return chatClient
+                .prompt().system(hrPolicyTemplate)
+                .user(message)
+                .call().content();
+
+    }
 }

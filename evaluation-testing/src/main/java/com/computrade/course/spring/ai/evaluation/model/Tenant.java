@@ -1,4 +1,4 @@
-package com.computrade.course.spring.ai.gemini.model;
+package com.computrade.course.spring.ai.evaluation.model;
 
 public enum Tenant {
 
