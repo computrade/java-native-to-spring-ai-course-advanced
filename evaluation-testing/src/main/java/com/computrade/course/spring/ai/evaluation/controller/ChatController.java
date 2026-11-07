@@ -31,14 +31,6 @@ public class ChatController {
         return ResponseEntity.ok(chatResponse);
     }
 
-    @GetMapping("/prompt-stuffing")
-    public ResponseEntity<String> promptStuffing(@RequestParam("message") String message) {
-
-        String chatResponse = chatService.promptStuffing(message);
-        return ResponseEntity.ok(chatResponse);
-
-    }
-
     @PostMapping("/ingest")
     public ResponseEntity<String> ingestData() {
         vectorDBService.ingestCoursesToVectorStore();

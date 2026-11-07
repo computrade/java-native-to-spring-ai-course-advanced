@@ -14,9 +14,6 @@ public class ChatService {
 
     private final ChatClient chatClient;
 
-    @Value("classpath:/hrPolicy.st")
-    Resource hrPolicyTemplate;
-
     public String chat(String convId, String prompt) {
 
         String response = chatClient.prompt().user(prompt)
@@ -28,12 +25,4 @@ public class ChatService {
         return response;
     }
 
-    public String promptStuffing(String message) {
-
-        return chatClient
-                .prompt().system(hrPolicyTemplate)
-                .user(message)
-                .call().content();
-
-    }
 }
