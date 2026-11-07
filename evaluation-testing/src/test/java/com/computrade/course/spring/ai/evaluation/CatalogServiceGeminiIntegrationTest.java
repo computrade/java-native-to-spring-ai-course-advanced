@@ -2,8 +2,9 @@ package com.computrade.course.spring.ai.evaluation;
 
 import com.computrade.course.spring.ai.evaluation.model.StoreCatalog;
 import com.computrade.course.spring.ai.evaluation.service.CatalogService;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
 import org.springframework.ai.chat.evaluation.FactCheckingEvaluator;
 import org.springframework.ai.chat.evaluation.RelevancyEvaluator;
 import org.springframework.ai.document.Document;
@@ -11,6 +12,7 @@ import org.springframework.ai.evaluation.EvaluationRequest;
 import org.springframework.ai.evaluation.EvaluationResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.TestPropertySource;
 
 import java.util.Collections;
 import java.util.List;
@@ -18,6 +20,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
+@TestInstance(TestInstance.Lifecycle.PER_CLASS) // use same instance fot all tests in this class.
 class CatalogServiceGeminiIntegrationTest {
 
     @Autowired
@@ -26,6 +29,8 @@ class CatalogServiceGeminiIntegrationTest {
     private ChatClient.Builder chatClientBuilder;
 
     @Test
+    @DisplayName("Should test Real Gemini Response Structure")
+    @Timeout(value = 30)
     void testRealGeminiResponseStructure() {
         StoreCatalog catalog = catalogService.getCatalog("Gaming Laptops");
 
@@ -44,13 +49,19 @@ class CatalogServiceGeminiIntegrationTest {
         // Convert structured result back to string context for evaluation
         String responseContent = resultCatalog.toString();
 
-        // 2. Setup LLM-As-A-Judge Evaluator backed by Gemini ChatClient
+        // 2. Provide ground-truth context documents so the evaluator has reference context
+        Document contextDocument = new Document("""
+            Electronics catalog for Gaming Laptops must recommend a valid store name 
+            and featured products related strictly to high-performance gaming laptops.
+            """);
+
+        // 3. Setup LLM-As-A-Judge Evaluator backed by Gemini ChatClient
         RelevancyEvaluator relevancyEvaluator = new RelevancyEvaluator(chatClientBuilder);
 
         // 3. Build Evaluation Request: (User Question, Context List, Target LLM Response)
         EvaluationRequest evaluationRequest = new EvaluationRequest(
                 userQuery,
-                Collections.emptyList(), // Optional RAG context documents
+                List.of(contextDocument),
                 responseContent
         );
 
@@ -74,7 +85,7 @@ class CatalogServiceGeminiIntegrationTest {
         // AI generated response under test
         String aiGeneratedResponse = "CyberByte Electronics offers 2 years of hardware warranty coverage for gaming laptops.";
 
-        FactCheckingEvaluator factCheckingEvaluator = FactCheckingEvaluator.forBespokeMinicheck(chatClientBuilder);
+        FactCheckingEvaluator factCheckingEvaluator = FactCheckingEvaluator.builder (chatClientBuilder).build();
 
         EvaluationRequest request = new EvaluationRequest(
                 userQuery,

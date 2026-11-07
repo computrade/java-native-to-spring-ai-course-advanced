@@ -12,3 +12,14 @@ dependencies {
 
 
 }
+tasks.named('test') {
+    useJUnitPlatform()
+    if (project.hasProperty('geminiApiKey')) {
+        environment 'GEMINI_API_KEY', project.property('geminiApiKey')
+    }
+
+    if (project.hasProperty('finnhubApiKey')) {
+        environment 'FINNHUB_API_KEY', project.property('finnhubApiKey')
+    }
+}
+
