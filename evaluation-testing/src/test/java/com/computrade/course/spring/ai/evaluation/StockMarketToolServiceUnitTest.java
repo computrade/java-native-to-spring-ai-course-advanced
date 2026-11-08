@@ -3,6 +3,7 @@ package com.computrade.course.spring.ai.evaluation;
 import com.computrade.course.spring.ai.evaluation.model.StockQuote;
 import com.computrade.course.spring.ai.evaluation.service.FinnHubStockMarketService;
 import com.computrade.course.spring.ai.evaluation.service.StockMarketToolService;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -34,6 +35,7 @@ class StockMarketToolServiceUnitTest {
     private FinnHubStockMarketService finnHubStockMarketService;
 
     @Test
+    @DisplayName("Should test Fetch stock @Tool")
     void testFetchStockPriceDirectly() {
         String symbol = "AAPL";
         StockQuote expectedQuote = new StockQuote(symbol, 230.50, 235.00, 228.00, 229.00, 1.50, 0.65, 229.00, System.currentTimeMillis());

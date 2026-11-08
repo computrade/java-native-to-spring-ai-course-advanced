@@ -41,6 +41,7 @@ class CatalogServiceGeminiIntegrationTest {
     }
 
     @Test
+    @DisplayName("Should test Catalog with LLM As a Judge")
     void testCatalogRelevancyWithLLMAsAJudge() {
         // 1. Target Execution: Get generated response from your service
         String userQuery = "Gaming Laptops";
@@ -76,6 +77,7 @@ class CatalogServiceGeminiIntegrationTest {
     }
 
     @Test
+    @DisplayName("Should test Fact Checking with context")
     void testFactCheckingWithContext() {
         String userQuery = "What is the warranty policy for Gaming Laptops?";
 

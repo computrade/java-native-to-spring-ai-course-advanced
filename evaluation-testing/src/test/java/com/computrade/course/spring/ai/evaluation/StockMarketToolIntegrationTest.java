@@ -3,6 +3,7 @@ package com.computrade.course.spring.ai.evaluation;
 import com.computrade.course.spring.ai.evaluation.model.StockQuote;
 import com.computrade.course.spring.ai.evaluation.service.FinnHubStockMarketService;
 import com.computrade.course.spring.ai.evaluation.service.StockMarketToolService;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,7 @@ class StockMarketToolIntegrationTest {
     private FinnHubStockMarketService finnHubStockMarketService;
 
     @Test
+    @DisplayName("Should Compare LLM Fetch stock @Tool vs Direct API call")
     void testCompareLLMResponseWithActualToolCall() {
         String symbol = "AAPL";
 

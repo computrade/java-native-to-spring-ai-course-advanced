@@ -2,6 +2,7 @@ package com.computrade.course.spring.ai.evaluation;
 
 import com.computrade.course.spring.ai.evaluation.model.StoreCatalog;
 import com.computrade.course.spring.ai.evaluation.service.CatalogService;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -27,6 +28,7 @@ class CatalogServiceGeminiTest {
     private ChatModel chatModel;
 
     @Test
+    @DisplayName("Test Catalog With Mocked GeminiLLM")
     void testGetCatalogWithMockedGeminiLLM() {
 
         // 1. Stub getOptions() to return non-null ChatOptions to prevent NullPointerException

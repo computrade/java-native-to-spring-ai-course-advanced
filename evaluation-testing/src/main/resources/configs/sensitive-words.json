@@ -1,0 +1,7 @@
+{
+  "violence": ["Violence", "Bomb", "kill", "suicide", "attack", "weapon", "explode", "murder"],
+  "hateSpeech": ["Hate speech", "Racist", "Slur", "Harass", "Insult", "Abuse"],
+  "illegal": ["Hack", "Illegal", "Drugs", "Pirate", "Crack software", "Stolen", "Fraud"],
+  "injection": ["Ignore previous instructions", "System prompt", "Developer mode", "DAN", "Jailbreak"],
+  "pii": ["Social security number", "SSN", "Credit card", "Password", "Secret key"]
+}

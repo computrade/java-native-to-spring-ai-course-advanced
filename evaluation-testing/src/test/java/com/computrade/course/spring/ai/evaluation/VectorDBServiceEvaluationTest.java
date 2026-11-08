@@ -1,6 +1,7 @@
 package com.computrade.course.spring.ai.evaluation;
 
 import com.computrade.course.spring.ai.evaluation.service.VectorDBService;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.evaluation.RelevancyEvaluator;
@@ -24,6 +25,7 @@ class VectorDBServiceEvaluationTest {
     private ChatClient.Builder chatClientBuilder;
 
     @Test
+    @DisplayName("Should test Vector Store RAG")
     void testVectorStoreRAGResponseRelevancy() {
         String convId = "eval-session-999";
         String userQuery = "Recommend Java courses with high ratings.";
@@ -52,6 +54,7 @@ class VectorDBServiceEvaluationTest {
     }
 
     @Test
+    @DisplayName("Should response with No Info")
     void testQueryVectorStoreUnknownSubjectFallback() {
         String convId = "eval-session-102";
         String userQuery = "How do I bake a French sourdough bread from scratch?";
